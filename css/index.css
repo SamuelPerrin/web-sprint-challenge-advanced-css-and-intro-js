@@ -76,10 +76,10 @@ nav{
 }
 nav a{
     color:#626262;
+    margin: 0 2%;
 }
 nav span{
     border-left:3px solid #626262;
-
 }
 /*Title Section Styles*/
 .title-container{
@@ -136,13 +136,17 @@ button:hover{
 }
 
 /* Media Queries */
+/* Mobile */
 @media (max-width:500px) {
     nav{
         width:60%;
     }
+    nav span{
+        border: 1% solid #626262;
+        margin:0 2%;
+    }    
     .title-container div {
         width:100%;
-        height:80vh;
     }
     .title-container hr{
         width:100%;
@@ -150,6 +154,8 @@ button:hover{
     
     .artists-container{
         flex-direction:column;
+        justify-content:flex-start;
+        align-items:center;
     }
     .artist {
         width:100%;
