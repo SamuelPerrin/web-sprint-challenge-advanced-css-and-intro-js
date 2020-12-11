@@ -253,7 +253,7 @@ function get20s(array){
   }
   return result
 }
-// console.log(get20s(artists))
+console.log(get20s(artists))
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -363,12 +363,15 @@ function randomize(array){
   }
   return result
 }
-console.log(randomize(['a','b','c','d','e']))
+// console.log(randomize(['a','b','c','d','e']))
 
  /* 💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪
- Use advanced array methods (.map, .reduce, .filer) to refactor your MVP code (create an array of all artists born in the 1900s with .filter, for example) */
+ Use advanced array methods (.map, .reduce, .filter) to refactor your MVP code (create an array of all artists born in the 1900s with .filter, for example) */
 
- 
+function get20sFilter (array) {
+  return array.filter(artist => artist.years.slice(0,2) === '19').map(artist => artist.name)
+}
+
  
  
  /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑*/
