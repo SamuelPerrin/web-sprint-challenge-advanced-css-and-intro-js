@@ -247,7 +247,7 @@ function get20s(array){
   const result = [];
   for (let i = 0; i < array.length; i++) {
     let years = array[i].years;
-    if (years.slice(0,2) === '19' && years.slice(7,9) === '19') {
+    if (years.slice(0, 2) === '19' && years.slice(7, 9) === '19') {
       result.push(array[i].name)
     }
   }
@@ -265,8 +265,8 @@ console.log(get20s(artists))
  
  For example, if removeArtist is invoked with the artists array and the number 0, it will remove Amedeo Modigliani from our dataset and return the number 19. */
 
-function removeArtist(array,index){
-  array.splice(index,1)
+function removeArtist(array, index){
+  array.splice(index, 1)
   return array.length
 }
 // console.log(removeArtist(artists,0))
@@ -369,7 +369,7 @@ function randomize(array){
  Use advanced array methods (.map, .reduce, .filter) to refactor your MVP code (create an array of all artists born in the 1900s with .filter, for example) */
 
 function get20sFilter (array) {
-  return array.filter(artist => artist.years.slice(0,2) === '19').map(artist => artist.name)
+  return array.filter(artist => artist.years.slice(0, 2) === '19').map(artist => artist.name)
 }
 
  
