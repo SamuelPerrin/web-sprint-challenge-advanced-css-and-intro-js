@@ -1,4 +1,4 @@
-/*  const */ artists = [
+  const  artists = [
     {
       "id": 0,
       "name": "Amedeo Modigliani",
@@ -317,7 +317,7 @@ function lotsOfArt(array){
   }
   return result
 }
-console.log(lotsOfArt(artists))
+// console.log(lotsOfArt(artists))
 
 
 
@@ -353,12 +353,17 @@ function getHTML(/* Code here */){
 /* 💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪
 Create a function called `randomize` that takes a data array as an argument and returns a the same array in a randomized order. */
 
-function randomize(/* Code here */){
-
-    /* Code here */
-
+function randomize(array){
+  const result = [];
+  while (result.length < array.length) {
+    const randNum = Math.floor(Math.random() * array.length);
+    if (!result.includes(array[randNum])) {
+      result.push(array[randNum])
+    }
   }
-
+  return result
+}
+console.log(randomize(['a','b','c','d','e']))
 
  /* 💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪
  Use advanced array methods (.map, .reduce, .filer) to refactor your MVP code (create an array of all artists born in the 1900s with .filter, for example) */
@@ -372,11 +377,11 @@ function randomize(/* Code here */){
   return 'bar';
 }
 /*Don't touch the code after this line! */
-/* export  default{
+ export  default{
   foo,
   getArtistByIndex,
   get20s,
   removeArtist,
   addArtist,
   lotsOfArt
-} */
+}
